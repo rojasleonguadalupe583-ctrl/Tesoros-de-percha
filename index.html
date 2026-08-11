@@ -1,217 +1,198 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tesoros de Percha</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<title>Tesoros de Percha</title>
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #fff7f9;
-            color: #333;
-        }
+<meta name="description"
+content="Tesoros de Percha — Tu próximo favorito te espera.">
 
-        header {
-            background: #d98fa8;
-            color: white;
-            text-align: center;
-            padding: 35px 15px;
-        }
+<style>
 
-        header h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
+:root{
+    --wine:#650d17;
+    --pink:#ee7899;
+    --cream:#fff9fb;
+    --text:#482b32;
+}
 
-        header p {
-            font-size: 18px;
-        }
+*{
+    box-sizing:border-box;
+}
 
-        nav {
-            background: white;
-            padding: 18px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-        }
+body{
+    margin:0;
+    min-height:100vh;
+    font-family:Arial,sans-serif;
+    color:var(--text);
+    background:linear-gradient(
+        135deg,
+        #fff9fb,
+        #fbe4eb,
+        #fff
+    );
+}
 
-        nav a {
-            color: #b85c7b;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 12px;
-        }
+.page{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px 16px;
+}
 
-        .inicio {
-            text-align: center;
-            padding: 65px 20px;
-        }
+.card{
+    width:min(100%,560px);
+    background:rgba(255,255,255,.92);
+    border-radius:30px;
+    padding:30px 22px 34px;
+    text-align:center;
+    box-shadow:0 18px 50px rgba(101,13,23,.13);
+    border:1px solid rgba(101,13,23,.08);
+}
 
-        .inicio h2 {
-            color: #b85c7b;
-            font-size: 30px;
-            margin-bottom: 15px;
-        }
+.logo{
+    width:100%;
+    max-width:390px;
+    height:180px;
+    object-fit:cover;
+    border-radius:22px;
+    display:block;
+    margin:0 auto 20px;
+    background:#fbe4eb;
+}
 
-        .inicio p {
-            font-size: 18px;
-            max-width: 600px;
-            margin: auto;
-            line-height: 1.6;
-        }
+h1{
+    font-family:Georgia,serif;
+    font-size:clamp(25px,7vw,36px);
+    font-style:italic;
+    color:var(--wine);
+    margin:8px 0 12px;
+}
 
-        .boton {
-            display: inline-block;
-            margin-top: 25px;
-            background: #b85c7b;
-            color: white;
-            padding: 14px 28px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+p{
+    font-size:15px;
+    line-height:1.6;
+    color:#76515a;
+    margin:0 auto 26px;
+    max-width:430px;
+}
 
-        .productos {
-            padding: 45px 20px;
-            text-align: center;
-        }
+.links{
+    display:grid;
+    gap:13px;
+    max-width:440px;
+    margin:auto;
+}
 
-        .productos h2 {
-            color: #b85c7b;
-            margin-bottom: 30px;
-            font-size: 28px;
-        }
+a{
+    min-height:58px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    border-radius:17px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:700;
+    font-size:16px;
+    box-shadow:0 8px 18px rgba(50,20,25,.12);
+}
 
-        .contenedor {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
+.wa{
+    background:#25D366;
+}
 
-        .producto {
-            background: white;
-            width: 260px;
-            padding: 25px;
-            border-radius: 18px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
-        }
+.ig{
+    background:linear-gradient(
+        90deg,
+        #f58529,
+        #dd2a7b,
+        #8134af
+    );
+}
 
-        .foto {
-            font-size: 70px;
-            margin-bottom: 15px;
-        }
+.fb{
+    background:#1877F2;
+}
 
-        .producto h3 {
-            color: #b85c7b;
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
+.icon{
+    font-size:23px;
+    font-weight:800;
+}
 
-        .producto p {
-            line-height: 1.5;
-            margin-bottom: 12px;
-        }
+.brand{
+    margin-top:28px;
+    color:var(--pink);
+    font-family:Georgia,serif;
+    letter-spacing:2px;
+    font-size:13px;
+    text-transform:uppercase;
+}
 
-        .precio {
-            font-size: 20px;
-            font-weight: bold;
-            color: #d98fa8;
-        }
+.small{
+    margin-top:18px;
+    font-size:11px;
+    color:#a77c85;
+}
 
-        .contacto {
-            background: #f8dce5;
-            text-align: center;
-            padding: 45px 20px;
-            margin-top: 30px;
-        }
-
-        .contacto h2 {
-            color: #b85c7b;
-            margin-bottom: 15px;
-        }
-
-        footer {
-            background: #d98fa8;
-            color: white;
-            text-align: center;
-            padding: 22px;
-        }
-    </style>
+</style>
 </head>
 
 <body>
 
-    <header>
-        <h1>✨ Tesoros de Percha ✨</h1>
-        <p>Moda bonita para cada ocasión</p>
-    </header>
+<div class="page">
 
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#productos">Productos</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
+<section class="card">
 
-    <section class="inicio" id="inicio">
-        <h2>¡Bienvenida a Tesoros de Percha! 💕</h2>
+<div class="logo">
+    👗
+</div>
 
-        <p>
-            Descubre prendas especiales, bonitas y llenas de estilo.
-            Encuentra ese tesoro que estabas buscando.
-        </p>
+<h1>
+    Tu próximo favorito te espera ✨
+</h1>
 
-        <a class="boton" href="#productos">
-            Ver productos
-        </a>
-    </section>
+<p>
+    Descubre nuestros tesoros y encuentra
+    esa pieza especial que estabas buscando. 💗
+</p>
 
-    <section class="productos" id="productos">
+<div class="links">
 
-        <h2>🛍️ Nuestros productos</h2>
+<a class="wa"
+href="https://wa.me/5215523741132"
+target="_blank">
+💬 WhatsApp
+</a>
 
-        <div class="contenedor">
+<a class="ig"
+href="https://www.instagram.com/tesoros.de.percha"
+target="_blank">
+♡ Instagram
+</a>
 
-            <div class="producto">
-                <div class="foto">👗</div>
-                <h3>Vestidos</h3>
-                <p>Vestidos hermosos para lucir increíble.</p>
-                <div class="precio">$499</div>
-            </div>
+<a class="fb"
+href="https://www.facebook.com/share/18A4xjP6HY/"
+target="_blank">
+f Facebook
+</a>
 
-            <div class="producto">
-                <div class="foto">👚</div>
-                <h3>Blusas</h3>
-                <p>Blusas cómodas y con mucho estilo.</p>
-                <div class="precio">$299</div>
-            </div>
+</div>
 
-            <div class="producto">
-                <div class="foto">👖</div>
-                <h3>Pantalones</h3>
-                <p>Diseños modernos para combinar como quieras.</p>
-                <div class="precio">$399</div>
-            </div>
+<div class="brand">
+    Tesoros de Percha
+</div>
 
-        </div>
+<div class="small">
+    Encuentra tu próximo favorito. 💗
+</div>
 
-    </section>
+</section>
 
-    <section class="contacto" id="contacto">
-        <h2>💌 Contáctanos</h2>
-        <p>Gracias por visitar Tesoros de Percha.</p>
-        <p>¡Encuentra tu próximo tesoro! ✨</p>
-    </section>
-
-    <footer>
-        <p>Tesoros de Percha © 2026</p>
-    </footer>
+</div>
 
 </body>
 </html>
