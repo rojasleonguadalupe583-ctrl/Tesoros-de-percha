@@ -3,141 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Tesoros de Percha</title>
-
-<meta name="description"
-content="Tesoros de Percha — Tu próximo favorito te espera.">
+<meta name="description" content="Tesoros de Percha — Tu próximo favorito te espera.">
 
 <style>
-
 :root{
-    --wine:#650d17;
-    --pink:#ee7899;
-    --cream:#fff9fb;
-    --text:#482b32;
+--wine:#650d17;
+--pink:#ee7899;
+--cream:#fff9fb;
+--text:#482b32
 }
 
 *{
-    box-sizing:border-box;
+box-sizing:border-box
 }
 
 body{
-    margin:0;
-    min-height:100vh;
-    font-family:Arial,sans-serif;
-    color:var(--text);
-    background:linear-gradient(
-        135deg,
-        #fff9fb,
-        #fbe4eb,
-        #fff
-    );
+margin:0;
+min-height:100vh;
+font-family:Arial,sans-serif;
+color:var(--text);
+background:linear-gradient(135deg,#fff9fb,#fbe4eb,#fff)
 }
 
 .page{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:24px 16px;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:24px 16px
 }
 
 .card{
-    width:min(100%,560px);
-    background:rgba(255,255,255,.92);
-    border-radius:30px;
-    padding:30px 22px 34px;
-    text-align:center;
-    box-shadow:0 18px 50px rgba(101,13,23,.13);
-    border:1px solid rgba(101,13,23,.08);
+width:min(100%,560px);
+background:rgba(255,255,255,.92);
+border-radius:30px;
+padding:30px 22px 34px;
+text-align:center;
+box-shadow:0 18px 50px rgba(101,13,23,.13);
+border:1px solid rgba(101,13,23,.08)
 }
 
 .logo{
-    width:100%;
-    max-width:390px;
-    height:180px;
-    object-fit:cover;
-    border-radius:22px;
-    display:block;
-    margin:0 auto 20px;
-    background:#fbe4eb;
+width:min(100%,390px);
+height:auto;
+border-radius:22px;
+display:block;
+margin:0 auto 20px
 }
 
 h1{
-    font-family:Georgia,serif;
-    font-size:clamp(25px,7vw,36px);
-    font-style:italic;
-    color:var(--wine);
-    margin:8px 0 12px;
+font-family:Georgia,serif;
+font-size:clamp(25px,7vw,36px);
+font-style:italic;
+color:var(--wine);
+margin:8px 0 12px
 }
 
 p{
-    font-size:15px;
-    line-height:1.6;
-    color:#76515a;
-    margin:0 auto 26px;
-    max-width:430px;
+font-size:15px;
+line-height:1.6;
+color:#76515a;
+margin:0 auto 26px;
+max-width:430px
 }
 
 .links{
-    display:grid;
-    gap:13px;
-    max-width:440px;
-    margin:auto;
+display:grid;
+gap:13px;
+max-width:440px;
+margin:auto
 }
 
 a{
-    min-height:58px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:12px;
-    border-radius:17px;
-    text-decoration:none;
-    color:#fff;
-    font-weight:700;
-    font-size:16px;
-    box-shadow:0 8px 18px rgba(50,20,25,.12);
+min-height:58px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:12px;
+border-radius:17px;
+text-decoration:none;
+color:#fff;
+font-weight:700;
+font-size:16px;
+box-shadow:0 8px 18px rgba(50,20,25,.12);
+transition:.2s
+}
+
+a:hover{
+transform:translateY(-2px)
 }
 
 .wa{
-    background:#25D366;
+background:#25D366
 }
 
 .ig{
-    background:linear-gradient(
-        90deg,
-        #f58529,
-        #dd2a7b,
-        #8134af
-    );
+background:linear-gradient(90deg,#f58529,#dd2a7b,#8134af)
 }
 
 .fb{
-    background:#1877F2;
+background:#1877F2
 }
 
 .icon{
-    font-size:23px;
-    font-weight:800;
+font-size:23px;
+font-weight:800
 }
 
 .brand{
-    margin-top:28px;
-    color:var(--pink);
-    font-family:Georgia,serif;
-    letter-spacing:2px;
-    font-size:13px;
-    text-transform:uppercase;
+margin-top:28px;
+color:var(--pink);
+font-family:Georgia,serif;
+letter-spacing:2px;
+font-size:13px;
+text-transform:uppercase
 }
 
 .small{
-    margin-top:18px;
-    font-size:11px;
-    color:#a77c85;
+margin-top:18px;
+font-size:11px;
+color:#a77c85
 }
-
 </style>
 </head>
 
@@ -147,51 +134,53 @@ a{
 
 <section class="card">
 
-<div class="logo">
-    👗
-</div>
+<img class="logo" src="logo.jpg" alt="Tesoros de Percha">
 
 <h1>
-    Tu próximo favorito te espera ✨
+Tu próximo favorito te espera ✨
 </h1>
 
 <p>
-    Descubre nuestros tesoros y encuentra
-    esa pieza especial que estabas buscando. 💗
+Descubre nuestros tesoros y encuentra esa pieza especial que estabas buscando. 💗
 </p>
 
 <div class="links">
 
 <a class="wa"
 href="https://wa.me/5215523741132"
-target="_blank">
-💬 WhatsApp
+target="_blank"
+rel="noopener">
+<span class="icon">💬</span>
+WhatsApp
 </a>
 
 <a class="ig"
-href="https://www.instagram.com/tesoros.de.percha"
-target="_blank">
-♡ Instagram
+href="https://www.instagram.com/tesoros.de.percha?igsh=MTB5dnRodmFhcWxleA=="
+target="_blank"
+rel="noopener">
+<span class="icon">♡</span>
+Instagram
 </a>
 
 <a class="fb"
 href="https://www.facebook.com/share/18A4xjP6HY/"
-target="_blank">
-f Facebook
+target="_blank"
+rel="noopener">
+<span class="icon">f</span>
+Facebook
 </a>
 
 </div>
 
 <div class="brand">
-    Tesoros de Percha
+Tesoros de Percha
 </div>
 
 <div class="small">
-    Encuentra tu próximo favorito. 💗
+Encuentra tu próximo favorito. 💗
 </div>
 
 </section>
-
 </div>
 
 </body>
